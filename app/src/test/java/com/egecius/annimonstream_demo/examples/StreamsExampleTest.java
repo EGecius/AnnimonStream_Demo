@@ -1,18 +1,16 @@
-package com.egecius.annimonstream_demo;
+package com.egecius.annimonstream_demo.examples;
 
-
-import static android.R.id.list;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import static java.util.Arrays.asList;
 
 import com.annimon.stream.Optional;
+import com.egecius.annimonstream_demo.examples.StreamsExample;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 

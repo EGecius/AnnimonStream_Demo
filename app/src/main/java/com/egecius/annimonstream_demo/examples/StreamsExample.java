@@ -1,4 +1,4 @@
-package com.egecius.annimonstream_demo;
+package com.egecius.annimonstream_demo.examples;
 
 import com.annimon.stream.Optional;
 import com.annimon.stream.Stream;
