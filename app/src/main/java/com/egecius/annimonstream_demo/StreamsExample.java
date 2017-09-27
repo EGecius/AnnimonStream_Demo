@@ -1,5 +1,6 @@
 package com.egecius.annimonstream_demo;
 
+import com.annimon.stream.Optional;
 import com.annimon.stream.Stream;
 
 import java.util.List;
@@ -28,5 +29,20 @@ public class StreamsExample {
 
     public int getCounter() {
         return counter;
+    }
+
+    /** Returns only distinct values, based on equals() and hashmap() */
+    public List<Integer> distinct(List<Integer> integers) {
+        return Stream.of(integers)
+                .distinct()
+                .toList();
+    }
+
+    /** findFirst() returns first found value
+     * If not found, returns Optional.empty()
+     * */
+    public Optional<Integer> findFirst(List<Integer> integers) {
+        return Stream.of(integers)
+                .findFirst();
     }
 }
