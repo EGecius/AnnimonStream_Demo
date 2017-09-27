@@ -27,5 +27,14 @@ public class StreamsExampleTest {
         assertThat(listResult.get(0)).isEqualTo("3");
         assertThat(listResult.get(1)).isEqualTo("7");
     }
+    
+    @Test
+    public void forEach() {
+        assertThat(mSut.getCounter()).isEqualTo(0);
+
+        mSut.forEach(Arrays.asList(1, 2, 3, 4));
+        
+        assertThat(mSut.getCounter()).isEqualTo(4);
+    }
 
 }
