@@ -6,11 +6,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static java.util.Arrays.asList;
 
 import com.annimon.stream.Optional;
-import com.egecius.annimonstream_demo.examples.StreamsExample;
 
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -64,6 +64,15 @@ public class StreamsExampleTest {
         Optional<Integer> optional = mSut.findFirst(Collections.EMPTY_LIST);
 
         assertThat(optional.isPresent()).isFalse();
+    }
+
+    @Test
+    public void removesElementFromList() {
+        List<Integer> list = Arrays.asList(1, 2, 3);
+
+        List<Integer> listRemaining = mSut.removeFromList(list, 2);
+
+        assertThat(listRemaining).containsExactly(1, 3);
     }
 
 }

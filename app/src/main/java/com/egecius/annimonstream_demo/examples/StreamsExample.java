@@ -45,4 +45,11 @@ public class StreamsExample {
         return Stream.of(integers)
                 .findFirst();
     }
+
+
+    public List<Integer> removeFromList(List<Integer> list, Integer elementToRemove) {
+        return Stream.of(list)
+                .filterNot(value -> value.equals(elementToRemove))
+                .toList();
+    }
 }
